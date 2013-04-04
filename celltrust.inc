@@ -135,7 +135,7 @@ class CellTrust {
     $this->data = $this->receivedData['Data'];
     $this->keyword = $this->receivedData['CustomerNickname'];
     $this->phone_number = $this->receivedData['OriginatorAddress'];
-    $this->phone_carrier = $this->receivedData['Carrier'];
+    $this->phone_carrier = isset($this->receivedData['Carrier']) ? $this->receivedData['Carrier'] : NULL;
   }
 
   /**
